@@ -1,5 +1,7 @@
 # Random Maze Generator
 
-Note: NOT IMPLEMENTED YET. CURRENTLY WORKING
+Note: CURRENTLY WORKING
 
 Using Swift on Windows.
+
+*basic implementation done*
