@@ -1,3 +1,4 @@
 # Random Maze Generator
 
-Swift console application build using Swift on Windows.
+Note: NOT IMPLEMENTED YET. CURRENTLY WORKING
+Using Swift on Windows.
