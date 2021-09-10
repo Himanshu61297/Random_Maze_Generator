@@ -1,3 +1,3 @@
-# rmg
+# Random Maze Generator
 
-A description of this package.
+Swift console application build using Swift on Windows.
