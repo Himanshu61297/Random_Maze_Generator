@@ -15,7 +15,7 @@ class Random_DFS {
     func startAlgo() {
         let helper = Helper()
 
-        grid[start.0][start.1] = "  "
+        grid[start.0][start.1] = "   "
         stack.append(start)
 
         while stack.count > 0 {
@@ -30,15 +30,15 @@ class Random_DFS {
                 let randCell = neighbours[rand]
                 grid = helper.removeWallsBetween(current: current, neighbour: randCell, grid: grid)
                 
-                grid[randCell.0][randCell.1] = "  "
+                grid[randCell.0][randCell.1] = "   "
                 stack.append(randCell)
 
-                helper.printGrid(grid: grid)
+                //helper.printGrid(grid: grid)
                 //Thread.sleep(forTimeInterval: 1) // delay in sec
             }            
         }
 
-        //helper.printGrid(grid: grid)
+        helper.printGrid(grid: grid)
 
     }    
 }

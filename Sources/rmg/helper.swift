@@ -1,7 +1,7 @@
 import Foundation
 
 class Helper {
-    let wall: String = "[]"
+    let wall: String = "[#]"
 
     //For the calculation of 4 neighbours
     let checksList: [(Int, Int)]
@@ -38,7 +38,7 @@ class Helper {
             for _ in 0..<2 {
                 i += 1
                 if i >= 0 && j >= 0 && i < grid.count && j < grid[0].count { //Checking for the out of bounds of the array
-                    newGrid[i][j] = "  "                              
+                    newGrid[i][j] = "   "                              
                 }
             }
 
@@ -48,7 +48,7 @@ class Helper {
             for _ in 0..<2 {
                 i -= 1
                 if i >= 0 && j >= 0 && i < grid.count && j < grid[0].count { //Checking for the out of bounds of the array
-                    newGrid[i][j] = "  "                              
+                    newGrid[i][j] = "   "                              
                 }
             }
         }
@@ -59,7 +59,7 @@ class Helper {
             for _ in 0..<2 {
                 j += 1
                 if i >= 0 && j >= 0 && i < grid.count && j < grid[0].count { //Checking for the out of bounds of the array
-                    newGrid[i][j] = "  "                              
+                    newGrid[i][j] = "   "                              
                 }
             }
 
@@ -69,7 +69,7 @@ class Helper {
             for _ in 0..<2 {
                 j -= 1
                 if i >= 0 && j >= 0 && i < grid.count && j < grid[0].count { //Checking for the out of bounds of the array
-                    newGrid[i][j] = "  "                              
+                    newGrid[i][j] = "   "                              
                 }
             }
         }
@@ -87,7 +87,7 @@ class Helper {
 
             if i >= 0 && j >= 0 && i < grid.count && j < grid[0].count //Checking for the out of bounds of the array
             {
-                if grid[i][j] != "  " {
+                if grid[i][j] != "   " {
                     neighbours.append((i,j))
                 }           
             }
