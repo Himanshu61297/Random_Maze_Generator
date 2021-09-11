@@ -1,5 +1,5 @@
 import Foundation
 import Swift
 
-var handler = Handler(row: 30, col: 30)
+var handler = Handler(row: 41, col: 41)
 handler.homePage()

@@ -1,7 +1,7 @@
 import Foundation
 
 class Shared {
-    let wall: String = "[#]"   
+    let wall: String = "[@]"   
 
     //
     func createGridOf(row: Int, col: Int) -> [[String]] {
@@ -14,9 +14,18 @@ class Shared {
         for i in 0..<grid.count {
             for j in 0..<grid[0].count {
                 if j == 0 {
-                    print("\n\(grid[i][j])", terminator: "")            
+                    if grid[i][j] != wall && grid[i][j] != "   " {
+                        print("\n   ", terminator: "")
+                    }else {
+                        print("\n\(grid[i][j])", terminator: "")
+                    }
+                                
                 }else {
-                    print("\(grid[i][j])", terminator: "")  
+                    if grid[i][j] != wall && grid[i][j] != "   " {
+                        print("   ", terminator: "")
+                    }else {
+                        print("\(grid[i][j])", terminator: "")
+                    }
                 }         
             }        
         }

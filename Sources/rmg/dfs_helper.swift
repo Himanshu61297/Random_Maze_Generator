@@ -12,17 +12,17 @@ class Helper {
         let shared = Shared()
 
         if (current.0 - neighbour.0) > 0 {           
-            newGrid = shared.removeItemsBetween(pos: (i, j), thickness: 3, grid: newGrid, isRowDiff: true, isDiffPositive: true)
+            newGrid = shared.removeItemsBetween(pos: (i, j), thickness: 2, grid: newGrid, isRowDiff: true, isDiffPositive: true)
 
         }else if (current.0 - neighbour.0) < 0 {
-            newGrid = shared.removeItemsBetween(pos: (i, j), thickness: 3, grid: newGrid, isRowDiff: true, isDiffPositive: false)
+            newGrid = shared.removeItemsBetween(pos: (i, j), thickness: 2, grid: newGrid, isRowDiff: true, isDiffPositive: false)
         }
 
         if (current.1 - neighbour.1) > 0 {
-            newGrid = shared.removeItemsBetween(pos: (i, j), thickness: 3, grid: newGrid, isRowDiff: false, isDiffPositive: true)
+            newGrid = shared.removeItemsBetween(pos: (i, j), thickness: 2, grid: newGrid, isRowDiff: false, isDiffPositive: true)
 
         }else if (current.1 - neighbour.1) < 0 {
-            newGrid = shared.removeItemsBetween(pos: (i, j), thickness: 3, grid: newGrid, isRowDiff: false, isDiffPositive: false)
+            newGrid = shared.removeItemsBetween(pos: (i, j), thickness: 2, grid: newGrid, isRowDiff: false, isDiffPositive: false)
         }
 
         return newGrid
@@ -33,7 +33,7 @@ class Helper {
         var neighbours = [(Int, Int)]()  
         
         //For the calculation of 4 neighbours
-        let checksList = [( -3, 0), ( 0, -3), ( 0,  3), ( 3,  0)]   
+        let checksList = [( -2, 0), ( 0, -2), ( 0,  2), ( 2,  0)]   
         
         for check in checksList {
             let i = check.0 + pos.0

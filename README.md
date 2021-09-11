@@ -6,4 +6,4 @@ Using Swift on Windows.
 
 *->Randomized Iterative Depth-First Search*
 
-*->Adding more algorithms*
+*->Added basic implemention of Randomized Kruskal Algorithm*

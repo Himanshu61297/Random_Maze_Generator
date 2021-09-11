@@ -11,13 +11,17 @@ class Controller {
         self.row = row
         self.col = col
         self.shared = Shared()
-        self.grid = [[String]]()       
+        self.grid = [[String]]()
+        grid = shared.createGridOf(row: row, col: col)       
     }
 
     func random_Iterative_DFS(){
-        grid = shared.createGridOf(row: row, col: col)
-
         let rdfs = Random_DFS(grid: grid, start: (1,1))
         rdfs.start()
+    }
+
+    func random_kruskal() {
+        let rka = Random_Kruskal(grid: grid)
+        rka.start()
     }
 }

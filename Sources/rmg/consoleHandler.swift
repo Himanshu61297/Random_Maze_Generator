@@ -10,7 +10,8 @@ class Handler {
 
     func homePage(){
         print("\n[#][#] MAZE GENERATION ALGORITHMS VISUALIZER[#][#]")
-        print("1. Randomize Itrative Depth First Search")
+        print("1. Randomized Itrative Depth First Search")
+        print("2. Randomized Kruskal's Algorithm")
         print("...more to come :)")        
         setAlgo(readLine() ?? "0")        
     }
@@ -19,6 +20,10 @@ class Handler {
         switch ch {
         case "1":
             controller.random_Iterative_DFS()
+            break
+        
+        case "2":
+            controller.random_kruskal()
             break
             
         default:
