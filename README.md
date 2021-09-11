@@ -4,6 +4,6 @@ Note: CURRENTLY WORKING
 
 Using Swift on Windows.
 
-*->basic implementation done*
+*->Randomized Iterative Depth-First Search*
 
-*->basic code refactoring done*
+*->Adding more algorithms*
