@@ -4,4 +4,5 @@ Note: CURRENTLY WORKING
 
 Using Swift on Windows.
 
-*basic implementation done*
+*->basic implementation done*
+*->basic code refactoring done*
