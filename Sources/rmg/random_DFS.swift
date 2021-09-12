@@ -34,9 +34,7 @@ class Random_DFS {
                 stack.append(randCell)
 
                 shared.printGrid(grid: grid)
-                //Thread.sleep(forTimeInterval: 0.5) // delay in sec
             }            
         }
-        //shared.printGrid(grid: grid)
     }    
 }

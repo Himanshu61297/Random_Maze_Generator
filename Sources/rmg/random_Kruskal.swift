@@ -16,7 +16,7 @@ class Random_Kruskal {
         var sets = [[(Int,Int)]]()
         var index = 0
 
-        var (allCells, allWalls) = kHelper.getValidCellsAndWalls(grid: grid)
+        var (_, allWalls) = kHelper.getValidCellsAndWalls(grid: grid)
 
         while allWalls.count > 0 {
 
@@ -35,7 +35,10 @@ class Random_Kruskal {
 
                 sets.append(cells)
                 index += 1
+
+                shared.printGrid(grid: grid)
             }
+
             else if grid[cellA.0][cellA.1] != grid[cellB.0][cellB.1] && grid[cellA.0][cellA.1] != shared.wall && grid[cellB.0][cellB.1] != shared.wall{
                 
                 let valA: Int = Int(grid[cellA.0][cellA.1]) ?? -1
@@ -44,7 +47,10 @@ class Random_Kruskal {
                 (grid, sets) = kHelper.mergeSets(valA: valA, valB: valB, sets: sets, grid: grid)   
 
                 grid[wall.0][wall.1] = "   " 
+
+                shared.printGrid(grid: grid)
             }
+
             else if grid[cellA.0][cellA.1] == shared.wall && grid[cellB.0][cellB.1] != shared.wall {  
 
                 let valB: Int = Int(grid[cellB.0][cellB.1]) ?? -1  
@@ -53,8 +59,11 @@ class Random_Kruskal {
                     sets[valB].append(cellA)
                     grid[cellA.0][cellA.1] = String(valB)
                     grid[wall.0][wall.1] = "   " 
+
+                    shared.printGrid(grid: grid)
                 }
             } 
+
             else if grid[cellA.0][cellA.1] != shared.wall && grid[cellB.0][cellB.1] == shared.wall {
 
                 let valA: Int = Int(grid[cellA.0][cellA.1]) ?? -1 
@@ -62,11 +71,12 @@ class Random_Kruskal {
                 if valA >= 0 && valA < sets.count {
                     sets[valA].append(cellB)
                     grid[cellB.0][cellB.1] = String(valA)
-                    grid[wall.0][wall.1] = "   " 
+                    grid[wall.0][wall.1] = "   "
+                    
+                    shared.printGrid(grid: grid) 
                 }
             }             
             allWalls.remove(at: rand) 
-            shared.printGrid(grid: grid)
         }
     }    
 }

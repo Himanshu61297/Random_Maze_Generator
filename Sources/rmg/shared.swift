@@ -9,7 +9,7 @@ class Shared {
     }
 
     //
-    func printGrid(grid: [[String]]){
+    func printGrid(grid: [[String]], delayAtEnd: Double = 0.1){
         print("\u{001B}[H \u{001B}[J") //Clear screen on terminal
         for i in 0..<grid.count {
             for j in 0..<grid[0].count {
@@ -29,6 +29,7 @@ class Shared {
                 }         
             }        
         }
+        Thread.sleep(forTimeInterval: delayAtEnd) // delay in sec
     } 
 
     //

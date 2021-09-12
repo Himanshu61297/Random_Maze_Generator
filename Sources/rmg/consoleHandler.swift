@@ -5,7 +5,8 @@ class Handler {
     private let controller: Controller
 
     init(row: Int, col: Int){
-        self.controller = Controller(row: row, col: col)
+
+        self.controller = Controller(row: ((row * 2) + 1), col: ((col * 2) + 1))
     }
 
     func homePage(){
