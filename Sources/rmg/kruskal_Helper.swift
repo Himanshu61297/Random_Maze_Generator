@@ -37,5 +37,27 @@ class Kruskal_Helper {
         }
 
         return cells
-    }    
+    }  
+
+    func mergeSets(valA: Int, valB: Int, sets: [[(Int, Int)]], grid: [[String]]) -> ([[String]], [[(Int, Int)]]){
+        
+        var newGrid = grid
+        var newSet = sets
+        
+        if valA < valB {
+        newSet[valA].append(contentsOf: newSet[valB]) 
+        for (i,j) in newSet[valB] {
+            newGrid[i][j] = String(valA)
+        }
+        }
+        else {
+            newSet[valB].append(contentsOf: newSet[valA])
+            for (i, j) in newSet[valA] {
+                newGrid[i][j] = String(valB)
+            }
+        }
+
+        return (newGrid, newSet)  
+   }  
+
 }
