@@ -9,3 +9,5 @@ Algorithms used.
 *->Randomized Iterative Depth-First Search*
 
 *->Randomized Kruskal's Algorithm*
+
+*->Randomized Prim's Algorithm*
