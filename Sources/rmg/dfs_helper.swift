@@ -29,7 +29,7 @@ class Helper {
     }
 
     //
-    func getNeighboursOf(pos: (Int, Int), grid: [[String]]) -> [(Int, Int)] {
+    func getNeighboursOf(pos: (Int, Int), grid: [[String]], notVisited: Bool = true) -> [(Int, Int)] {
         var neighbours = [(Int, Int)]()  
         
         //For the calculation of 4 neighbours
@@ -42,9 +42,11 @@ class Helper {
             //Checking for the out of bounds of the array
             if i >= 0 && j >= 0 && i < grid.count && j < grid[0].count 
             {
-                if grid[i][j] != "   " {
+                if grid[i][j] != "   "  && notVisited == true {
                     neighbours.append((i,j))
-                }           
+                } else if grid[i][j] == "   "  && notVisited == false {
+                    neighbours.append((i,j))
+                }          
             }
         }
         return neighbours

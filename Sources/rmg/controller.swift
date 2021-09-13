@@ -24,4 +24,9 @@ class Controller {
         let rka = Random_Kruskal(grid: grid)
         rka.start()
     }
+
+    func random_Prim(){
+        let rpa = Random_Prim(grid: grid, start: (1,1))
+        rpa.start()
+    }
 }

@@ -13,6 +13,7 @@ class Handler {
         print("\n[#][#] MAZE GENERATION ALGORITHMS VISUALIZER[#][#]")
         print("1. Randomized Itrative Depth First Search")
         print("2. Randomized Kruskal's Algorithm")
+        print("3. Randomized Prim's Algorithm")
         print("...more to come :)")        
         setAlgo(readLine() ?? "0")        
     }
@@ -25,6 +26,10 @@ class Handler {
         
         case "2":
             controller.random_kruskal()
+            break
+
+        case "3":
+            controller.random_Prim()
             break
             
         default:
