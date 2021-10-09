@@ -1,7 +1,5 @@
 # Random Maze Generation Visualizer
 
-Note: CURRENTLY WORKING
-
 Console application. Using Swift on Windows.
 
 Algorithms used.
